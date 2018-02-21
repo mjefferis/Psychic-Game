@@ -8,8 +8,8 @@
 
 <body>
 <h1>Psychic Game</h1>
-<div id="game">
 <p>Guess what letter I am thinking of!</p>
+<div id="game">
 </div>
 
 <script type="text/javascript">
@@ -30,10 +30,11 @@
     var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
     if(userGuess.toLowerCase()==='a'|| userGuess.toLowerCase()==='b'|| userGuess.toLowerCase()==='c'|| userGuess.toLowerCase()==='d'|| userGuess.toLowerCase()==='e'|| userGuess.toLowerCase()==='f'|| userGuess.toLowerCase()==='g'|| userGuess.toLowerCase()==='h'|| userGuess.toLowerCase()==='i'|| userGuess.toLowerCase()==='j'|| userGuess.toLowerCase()==='k'|| userGuess.toLowerCase()==='l'|| userGuess.toLowerCase()==='m'|| userGuess.toLowerCase()==='n'|| userGuess.toLowerCase()==='o'|| userGuess.toLowerCase()==='p'|| userGuess.toLowerCase()==='q'|| userGuess.toLowerCase()==='r'|| userGuess.toLowerCase()==='s'|| userGuess.toLowerCase()==='t'|| userGuess.toLowerCase()==='u'|| userGuess.toLowerCase()==='v'|| userGuess.toLowerCase()==='w'|| userGuess.toLowerCase()==='x'|| userGuess.toLowerCase()==='y'|| userGuess.toLowerCase()==='z'){
-    if(userGuess === computerChoice){
+    if(userGuess.toLowerCase() === computerChoice){
         wins++;
         guessesSoFar.length = 0; 
-        guessesSoFar.push(" " + userGuess.toLowerCase()); 
+        guessesLeft = 0;
+        losses--;
     }
     else{
         guessesLeft--;
